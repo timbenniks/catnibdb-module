@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.9.1",
-    "camelcase": "^8.0.0"
+    "camelcase": "^8.0.0",
+    "defu": "^6.1.4"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
