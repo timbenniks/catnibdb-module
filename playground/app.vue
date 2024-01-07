@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="block">
+    <CatnibdbPage slug="home" />
+
+    <!-- <div class="block">
       <p>cat <span>{ id: 6 }</span></p>
       <pre>{{ cat }}</pre>
       <pre v-if="catError">{{ catError }}</pre>
@@ -25,19 +27,19 @@
       <p>pages</p>
       <pre>{{ pages }}</pre>
       <pre v-if="pagesError">{{ pagesError }}</pre>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
-const { data: cat, error: catError } = await useCat({ id: 6 });
-const { data: cats, error: catsError } = await useCats({
-  per_page: 2,
-  order_by: "id",
-  order_direction: "asc",
-});
-const { data: page, error: pageError } = await usePage({ slug: "home" });
-const { data: pages, error: pagesError } = await usePages();
+// const { data: cat, error: catError } = await useCat({ id: 6 });
+// const { data: cats, error: catsError } = await useCats({
+//   per_page: 2,
+//   order_by: "id",
+//   order_direction: "asc",
+// });
+// const { data: page, error: pageError } = await usePage({ slug: "home" });
+// const { data: pages, error: pagesError } = await usePages();
 </script>
 
 <style>

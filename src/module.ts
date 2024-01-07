@@ -1,4 +1,4 @@
-import { defineNuxtModule, createResolver } from '@nuxt/kit'
+import { defineNuxtModule, createResolver, addComponent } from '@nuxt/kit'
 import { defu } from 'defu'
 import { fileURLToPath } from 'url'
 
@@ -20,7 +20,6 @@ export default defineNuxtModule<ModuleOptions>({
     key: process.env.CATNIBDB_KEY as string
   },
   setup(options, nuxt) {
-
     nuxt.options.runtimeConfig.public.catnibdb = defu(nuxt.options.runtimeConfig.public.catnibdb, {
       url: options.url,
       key: options.key,
@@ -37,6 +36,12 @@ export default defineNuxtModule<ModuleOptions>({
 
     const { resolve } = createResolver(import.meta.url)
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
+
+    addComponent({
+      name: 'CatnibdbPage',
+      export: 'CatnibdbPage',
+      filePath: resolve(runtimeDir, 'components/CatnibdbPage.ts')
+    })
 
     nuxt.hook('imports:dirs', (dirs) => {
       dirs.push(resolve(runtimeDir, 'composables'))

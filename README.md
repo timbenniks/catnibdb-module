@@ -19,7 +19,7 @@ CatnibDB Nuxt module to interface with CatnibDB back-end.
 - 🙀 &nbsp;`useCats()`
 - 😸 &nbsp;`usePage()`
 - 😺 &nbsp;`usePages()`
-- 😽 &nbsp;`<renderComponentsForPage slug="home" />`
+- 😽 &nbsp;`<CatnibdbPage slug="home" />`
 
 ## Quick Setup
 
@@ -83,10 +83,6 @@ npm run dev:build
 
 # Run ESLint
 npm run lint
-
-# Run Vitest
-npm run test
-npm run test:watch
 
 # Release new version
 npm run release
