@@ -1,5 +1,8 @@
 <script setup>
-const props = defineProps(["component"]);
+const props = defineProps({
+  component: { type: Object, required: true },
+});
+
 const { title, fields } = props.component;
 </script>
 <template>
